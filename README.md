@@ -1,15 +1,14 @@
 # JavaScript Programs
 
-[x] Objects
-[-] Strings
-
-- Arrays
-- Function declaration and expression
-- var, let, const
-- Prototype and Inheritance
-- Destructuring
-- Template literals
-- Spread and Rest Operators
+- [x] Objects
+- [ ] Strings
+- [ ] Arrays
+- [ ] Function declaration and expression
+- [ ] var, let, const
+- [ ] Prototype and Inheritance
+- [ ] Destructuring
+- [ ] Template literals
+- [ ] Spread and Rest Operators
 
 - async and await
 - Promise
