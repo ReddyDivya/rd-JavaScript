@@ -1,13 +1,25 @@
 # JavaScript Programs
 
-### Objects
-
-### Strings
-
-### Prototype and Inheritance
-
-### async and await
-
-### Promise
-
-### Callback
+- Objects
+- Strings
+- Prototype and Inheritance
+- async and await
+- Promise
+- Callback
+- Closures
+- setTimeOut
+- Event Loops
+- var, let, const
+- Block Scope & Shadowing
+- Call, Apply, and Bind
+- IIFEs
+- higher order functions
+- Classes
+- DOM
+- Events
+- Function declaration and expression
+- Debouncing & Throttling
+- Polyfill
+- map, filter, reduce
+- Error handling and Advance Error Handling
+  -- this keyword
