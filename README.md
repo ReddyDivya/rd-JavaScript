@@ -1,7 +1,8 @@
 # JavaScript Programs
 
-- [] Objects
-- [] Strings
+[x] Objects
+[-] Strings
+
 - Arrays
 - Function declaration and expression
 - var, let, const
