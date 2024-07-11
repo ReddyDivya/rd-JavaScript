@@ -125,3 +125,64 @@ console.log(`Unique Array - ${uniqueArr}`); // Output: [1, 2, 3, 4, 5]
 // Merging multiple arrays
 let mergeArrs = arr1.concat(arr2, arr4);
 console.log(`Merge Arrays - ${mergeArrs}`); // Output: [1, 'a', 'c', 'e', 'f', 'g', 4
+
+/*
+Arrays
+Explanation:
+Creating Arrays:
+
+Arrays can be created using square brackets [] or the Array constructor.
+arr1 is an empty array.
+arr2 is an array with initial elements [1, 2, 3].
+arr3 is an array with a predefined length of 5.
+Accessing and Modifying Elements:
+
+Access elements using bracket notation arr[index].
+Modify elements by assigning a new value to a specific index.
+Common Array Methods:
+
+push(element): Adds an element to the end of the array.
+pop(): Removes the last element of the array.
+unshift(element): Adds an element to the beginning of the array.
+shift(): Removes the first element of the array.
+splice(start, deleteCount, item1, item2, ...): Changes the content of an array by removing, replacing, or adding elements.
+Concatenating/Merging Arrays:
+
+concat(array1, array2, ...): Merges arrays.
+Finding Elements:
+
+indexOf(element): Returns the first index at which a given element can be found.
+includes(element): Determines whether an array includes a certain value.
+Slicing Arrays:
+
+slice(start, end): Extracts a section of the array.
+Iterating Over Arrays:
+
+forEach(callback): Executes a provided function once for each array element.
+Mapping Arrays:
+
+map(callback): Creates a new array populated with the results of calling a provided function on every element.
+Filtering Arrays:
+
+filter(callback): Creates a new array with all elements that pass the test implemented by the provided function.
+Checking All Elements:
+
+every(callback): Tests whether all elements in the array pass the provided function.
+Checking Some Elements:
+
+some(callback): Tests whether at least one element in the array passes the provided function.
+Reducing Arrays:
+
+reduce(callback, initialValue): Executes a reducer function on each element of the array, resulting in a single output value.
+Advanced Array Methods:
+
+find(callback): Returns the value of the first element that satisfies the provided testing function.
+findIndex(callback): Returns the index of the first element that satisfies the provided testing function.
+flat(depth): Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+sort(compareFunction): Sorts the elements of an array in place and returns the array.
+reverse(): Reverses the array in place.
+Common Use Cases:
+
+Removing duplicates using Set.
+Merging multiple arrays using concat.
+*/
