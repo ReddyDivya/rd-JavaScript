@@ -8,66 +8,93 @@
  */
 
 // Creating strings
-let str1 = 'Hello';
+let str1 = "Hello";
 let str2 = "World";
-let str3 = `Hello, World!`; // Template literal
+let str3 = "Hello World";
 
 /**
  * Properties and Accessing Characters
  */
-console.log(str1.length); // .length property returns the number of characters in a string
-console.log(str1[0]); // Accessing characters using bracket notation
-console.log(str1.charAt(0)); // Accessing characters using .charAt() method
+console.log(str1.length); // Output: 5
+// .length property returns the number of characters in a string
+
+console.log(str1[1]); // Output: "e"
+// Accessing characters with index using bracket notation
+
+console.log(str1.charAt(0)); // Output: "H"
+// Accessing characters with index using .charAt() method
 
 /**
  * Common String Methods
  */
-console.log(str1.toUpperCase()); // Convert to upper case
-console.log(str1.toLowerCase()); // Convert to lower case
-console.log(str1.includes("ell")); // Check if substring exists
-console.log(str1.indexOf("l")); // Index of first occurrence
-console.log(str1.lastIndexOf("l")); // Index of last occurrence
-console.log(str1.slice(1, 4)); // Extract a section of the string
-console.log(str1.substring(1, 4)); // Similar to .slice() but without negative indices
-console.log(str1.substr(1, 3)); // Extracts a substring of a specified length
-console.log(str1.replace("ell", "ipp")); // Replace a substring
-console.log(str1.split("")); // Split the string into an array of substrings
-console.log("  Hello  ".trim()); // Remove whitespace from both ends
+console.log(str1.toUpperCase()); // Output: "HELLO"
+// Convert to upper case
+
+console.log(str1.toLowerCase()); // Output: "hello"
+// Convert to lower case
+
+console.log(str1.includes("ell")); // Output: true
+// Check if substring exists
+
+console.log(str1.indexOf("l")); // Output: 2
+// Index of first occurrence
+
+console.log(str1.lastIndexOf("l")); // Output: 3
+// Index of last occurrence
+
+console.log(str1.slice(1, 3)); // Output: "el"
+// Extract a section of the string from index 1 to 3 (excluding 3)
+
+console.log(str1.substring(1, 4)); // Output: "ell"
+// Similar to .slice() but without negative indices, extract from index 1 to 4 (excluding 4)
+
+console.log(str1.replace("el", "oo")); // Output: "Hoolo"
+// Replace a substring
+
+console.log(str3.split(" ")); // Output: ["Hello", "World"]
+// Split the string into an array of substrings
+
+console.log("  Good   ".trim()); // Output: "Good"
+// Remove whitespace from both ends
 
 /**
- * Template Literals
- * Allow for multi-line strings and string interpolation
+ * Template Literals - Allow for multi-line strings and string interpolation
  */
-let name = "Alice";
+let name = "Arjun";
 let greeting = `Hello, ${name}!`; // Embedding expressions
-console.log(greeting); // 'Hello, Alice!'
+console.log(greeting); // Output: "Hello, Arjun!"
 
 /**
  * Common Use Cases and Examples
  */
 
 // Reversing a string
-function reverseString(str) {
+const reverseString = (str) => {
     return str.split("").reverse().join("");
 }
-console.log(reverseString("hello")); // 'olleh'
+console.log(`Reverse String - ${reverseString('Arjun Das')}`); // Output: "saD nujrA"
 
 // Checking if a string is a palindrome
-function isPalindrome(str) {
+const isPalindrome = (str) => {
     // Convert to lowercase and remove non-alphanumeric characters
     let cleanString = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
+    
     // Check if the cleaned string reads the same forwards and backwards
-    return cleanString === cleanString.split("").reverse().join("");
+    return cleanString == cleanString.split("").reverse().join("");
 }
-console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
+console.log(`Is 'Arjun Das' Palindrome? - ${isPalindrome('Arjun Das')}`); // Output: false
+console.log(`Is 'Liril' Palindrome? - ${isPalindrome('Liril')}`); // Output: true
+console.log(`Is 'A man, a plan, a canal: Panama' Palindrome? - ${isPalindrome('A man, a plan, a canal: Panama')}`); // Output: true
 
 // Checking if two strings are anagrams
-function areAnagrams(str1, str2) {
+const areAnagrams = (str1, str2) => {
     // Normalize both strings: lowercase, remove non-alphanumeric, sort characters
-    let normalize = str => str.toLowerCase().replace(/[^a-z0-9]/g, "").split("").sort().join("");
-    return normalize(str1) === normalize(str2);
+    let normalizeStr = str => str.toLowerCase().replace(/[^a-z0-9]/g, "").split("").sort().join("");
+    
+    return normalizeStr(str1) == normalizeStr(str2);
 }
-console.log(areAnagrams("listen", "silent")); // true
+console.log(`Are 'cat', 'rat' Anagrams? - ${areAnagrams('cat', 'rat')}`); // Output: false
+console.log(`Are 'listen', 'silent' Anagrams? - ${areAnagrams('listen', 'silent')}`); // Output: true
 
 /**
  * Important Points for Interviews
@@ -77,3 +104,27 @@ console.log(areAnagrams("listen", "silent")); // true
  * - Practice common use cases like reversing a string, palindrome check, and anagram check
  */
 
+/*
+String Creation:
+
+Strings can be created using single quotes, double quotes, or backticks for template literals.
+Properties and Accessing Characters:
+
+.length: Returns the length of the string.
+Bracket notation [index] and .charAt(index): Access characters at a specific index.
+Common String Methods:
+
+toUpperCase(): Converts the string to upper case.
+toLowerCase(): Converts the string to lower case.
+includes(substring): Checks if the substring exists within the string.
+indexOf(character): Returns the index of the first occurrence of the character.
+lastIndexOf(character): Returns the index of the last occurrence of the character.
+slice(start, end): Extracts a section of the string from start to end (excluding end).
+substring(start, end): Similar to slice() but does not support negative indices.
+replace(oldSubstring, newSubstring): Replaces occurrences of oldSubstring with newSubstring.
+split(delimiter): Splits the string into an array of substrings based on the delimiter.
+trim(): Removes whitespace from both ends of the string.
+Template Literals:
+
+Allow embedding expressions and creating multi-line strings using backticks.
+*/
